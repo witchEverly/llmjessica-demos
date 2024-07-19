@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1250px;
+            max-width: 1020px;
             margin: 10px auto;
             padding: 40px;
             background-color: #1f1e33; /* Lighter Purple */
@@ -58,12 +58,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin: 20px auto;
             overflow: hidden; /* Ensure content fits */
+            justify-content: center;
+            align-items: center;
         }
         iframe {
             width: 100%;
             border: none;
             border-radius: 1px;
             background-color: #1f1e33; /* Match the container color */
+            justify-content: center;
+            align-items: center;
         }
         /* Flex container for image */
         .image-container {
@@ -75,30 +79,6 @@
             max-width: 100%;
             height: auto;
             border-radius: 1px;
-        }
-        .code-box {
-            background-color: #282c34;
-            border: 2px solid #e1e1e1;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            color: #61dafb; /* Code text color */
-            text-align: left;
-            max-width: 800px;
-        }
-        /* Style for the heading of the code box */
-        .code-box h3 {
-            font-family: 'Arial', sans-serif;
-            color: #fe428e; /* Radical Pink */
-            margin: 0 0 10px 0;
-            text-align: center;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
         }
     </style>
 </head>
