@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos - LLMjessica.com</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #21011e; /* Dark Purple */
+            color: #d3d3d3; /* Grey Text */
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1250px;
+            margin: 10px auto;
+            padding: 40px;
+            background-color: #1f1e33; /* Lighter Purple */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #fe428e; /* Radical Pink */
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.3em;
+            margin: 20px;
+        }
+        .content {
+            font-size: 1.1em;
+            text-align: left;
+            margin: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #21011e; /* Dark Purple Background */
+            color: #fe428e; /* Radical Pink */
+            margin-top: 40px;
+            box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow at the top */
+        }
+        .footer a {
+            color: #fe428e;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Style for the iframe container */
+        .iframe-container {
+            width: 100%;
+            position: relative;
+            background-color: #1f1e33; /* Match the lighter purple */
+            border-radius: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            overflow: hidden; /* Ensure content fits */
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 1px;
+            background-color: #1f1e33; /* Match the container color */
+        }
+        /* Flex container for image */
+        .image-container {
+            float: left;
+            margin: 0 20px 20px 0; /* Adjust margins as needed */
+            max-width: 50%; /* Adjust width as needed */
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1px;
+        }
+        .code-box {
+            background-color: #282c34;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            color: #61dafb; /* Code text color */
+            text-align: left;
+            max-width: 800px;
+        }
+        /* Style for the heading of the code box */
+        .code-box h3 {
+            font-family: 'Arial', sans-serif;
+            color: #fe428e; /* Radical Pink */
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>✨ <i>LLMjessica.com</i> ✨</h2>
+            <h1>Document Clustering with LLM Labeling</h1>
+            <h3>
+                Explore document clustering techniques to create an interactive visualization.
+            </h3>
+            <hr>
+        </header>
+        <div class="content clearfix">
+            <div class="image-container">
+                <img src="img.png" alt="BERTopic Pipeline">
+            </div>
+            <p>
+                <strong>
+                    The goal of this demo is to explore and visualize topics within a corpus of text.
+                    The data utilized in this project is a curated subset of metadata from research papers available on arXiv.
+                </strong>
+                <br><br>
+                Using BERTopic, an open source Python library that combines traditional clustering methods with transformer-based embeddings, we identify coherent topics. The pipeline includes multiple semi-supervised and unsupervised algorithms, for example: dimensionality reduction techniques (UMAP) and clustering algorithms (HDBSCAN).
+                <br><br>
+                The goal is to group similar documents together, creating clusters that represent distinct topics. We take this one step further by generating interpretable labels for these topics. Llama2 was used to generate a fine-tuned representation of the clustered topics. The Llama-2 model is loaded with quantization to handle the LLM on limited GPU memory, by leveraging 4-bit quantization.
+            </p>
+        </div>
+        <p class="content"><strong>To interpret the results of the BERTopic algorithm, we create a Plotly visualization where the labeled topics / documents can be explored users.
+            By setting custom labels derived from the text generation models, we have a way for our topics to be easily interpreted.
+        </strong></p>
+        <div class="iframe-container">
+            <iframe src="fig.html" title="Embedded Document" onload="resizeIframe(this)"></iframe>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 LLMjessica.com. All rights reserved.</p>
+        <p><a href="https://llmjessica.com">Back to main site</a></p>
+    </footer>
+
+    <script>
+        function resizeIframe(iframe) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</body>
+</html>
