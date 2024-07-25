@@ -105,14 +105,16 @@
                     The data utilized in this project is a curated subset of metadata from research papers available on arXiv.
                 </strong>
                 <br><br>
-                Using BERTopic, an open source Python library that combines traditional clustering methods with transformer-based embeddings, we identify coherent topics. The pipeline includes multiple semi-supervised and unsupervised algorithms, for example: dimensionality reduction techniques (UMAP) and clustering algorithms (HDBSCAN).
+                Using BERTopic, a Python library that combines traditional clustering methods with transformer-based embeddings, we identify coherent topics.
+                The pipeline includes multiple semi-supervised and unsupervised algorithms, such as dimensionality reduction techniques (UMAP) and clustering algorithms (HDBSCAN).
                 <br><br>
-                The goal is to group similar documents together, creating clusters that represent distinct topics. We take this one step further by generating interpretable labels for these topics. Llama2 was used to generate a fine-tuned representation of the clustered topics. The Llama-2 model is loaded with quantization to handle the LLM on limited GPU memory, by leveraging 4-bit quantization.
-            </p>
-        </div>
-        <p class="content"><strong>To interpret the results of the BERTopic algorithm, we create a Plotly visualization where the labeled topics / documents can be explored users.
-            By setting custom labels derived from the text generation models, we have a way for our topics to be easily interpreted.
-        </strong></p>
+                The goal is to group similar documents together, creating clusters that represent distinct topics.
+                We take this one step further by generating interpretable labels for these topics.
+                Llama2 is used to generate a fine-tuned representation of the clustered topics.
+                The Llama2 model is loaded with quantization to handle the LLM on limited GPU memory, leveraging 4-bit quantization.
+                </p>
+            <hr>
+                <p class="content">To interpret the results of the BERTopic algorithm, a Plotly visualization is created where users can explore the labeled topics and documents. By setting custom labels derived from the text generation models, topics become more interpretable and user-friendly.</p>
         <div class="iframe-container">
             <iframe src="fig.html" title="Embedded Document" onload="resizeIframe(this)"></iframe>
         </div>
