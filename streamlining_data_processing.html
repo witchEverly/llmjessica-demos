@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos ✨ LLMjessica.com ✨</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_2.ico">
+<!--    <link rel="mask-icon" href="images/favicon_2.svg">-->
+<!--    <link rel="apple-touch-icon" href="images/favicon_2.png">-->
+    <style>
+        * {
+            box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #21011e; /* Dark Purple */
+            color: #d3d3d3; /* Grey Text */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px; /* Add padding to body for better spacing */
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #1f1e33;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #fe428e; /* Radical Pink */
+            margin: 10px 0;
+        }
+        p {
+            padding: 10px 40px;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        ul, ol {
+            margin: 10px 80px;
+            font-size: 1.1em;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.3em;
+            margin: 20px 0;
+        }
+        .quote-section {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .image-container {
+            text-align: center;
+            margin: 1px 0;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 1000px;
+            border: 1px solid #d3d3d3; /* Thin white border around images */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .subdomain-container {
+            background-color: #3a1b35; /* Lighter Purple Background */
+            padding: 10px;
+            border: 1px solid #d3d3d3; /* Whitish-grey outline */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+            border-radius: 10px;
+            max-width: 1000px;
+            text-align: center;
+            width: 100%;
+            margin: 20px auto;
+        }
+        .subdomain-container a {
+            color: #fe428e; /* Radical Pink */
+            text-decoration: none;
+        }
+        .subdomain-container a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #21011e; /* Dark Purple Background */
+            color: #fe428e; /* Radical Pink */
+            margin-top: 10px;
+        }
+        .footer a {
+            color: #fe428e;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Streamlining Data Processing using Apache Airflow, MongoDB, SparkSQL, and Google Composer</h1>
+        <br>
+        <div class="subdomain-container">
+        <h2>Initial Project Proposal</h2>
+            <p>
+                <em>
+                    Develop a data pipeline in Airflow that can be used to build an application to work as a social media platform for small groups of friends.
+                    The application will allow users to connect their Spotify accounts and share their listening history.
+                    We can then use this data to create a dashboard that uses aggregated data to visualize user listening habits and preferences.
+                </em>
+            </p>
+        <h2>The Finished Product</h2>
+            <div class="quote-section"> A Dynamic Dashboard for Sharing Music Taste with Friends </div>
+            <div class="image-container">
+                <kbd><img src="images/SpotifyWeeklyRecap.png" alt="Dashboard implementation with MongoDB Charts"></kbd>
+            </div>
+            <p>By implementing a fully automated data pipeline, we were able to create an dashboard for visualized listening history.
+                Users can connect their Spotify accounts via OAuth2 authentication, and the data pipeline collects and processes the data using Apache Airflow and Google Composer.
+                The data is stored in MongoDB Atlas, and the dashboard is built using MongoDB Charts, allowing users to share their music preferences and listening habits with friends and family.
+                The dashboard is automatically refreshed with the data from MongoDB Atlas in real-time, and serves as a platform to explore and compare music tastes as a shared experience.
+            </p>
+            </div>
+            <p class="intro">
+                For a full walkthrough of the project, please visit the <a href="https://medium.com/msds-distributed-data-systems/distributed-data-processing-with-apache-airflow-mongodb-and-sparksql-aa88e3bae97c">Medium article</a>.
+                <br>
+                To view the code and the project on GitHub, please visit the <a href="https://github.com/witchEverly/spotify_insights">GitHub repository</a>.
+            </p>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 LLMjessica.com. All rights reserved.</p>
+        <p><a href="https://llmjessica.com">Back to main site</a></p>
+    </footer>
+</body>
+</html>
