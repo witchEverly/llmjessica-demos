@@ -33,7 +33,7 @@
         .quote-section {
             text-align: center;
             font-size: 1.2em;
-            margin: 20px;
+            margin: 20px 0;
         }
         .content {
             text-align: center;
@@ -54,6 +54,22 @@
         }
         .demo-list a:hover {
             text-decoration: underline;
+        }
+        .styled-button {
+            background-color: #3a1b35;
+            color: white;
+            padding: 10px 20px;
+            /*border: #d63a70;*/
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px 10px;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+        }
+        .styled-button:hover {
+            background-color: #fe428e; /* Slightly darker shade for hover effect */
         }
         .footer {
             text-align: center;
@@ -112,8 +128,8 @@
         </div>
     </div>
     <footer class="footer">
-        <p>&copy; 2024 LLMjessica.com. All rights reserved.</p>
-        <p><a href="https://llmjessica.com">Back to main site</a></p>
+        <p class="quote-section">&copy; 2024 LLMjessica.com. All rights reserved.</p>
+        <button class="styled-button" onclick="window.location.href='https://llmjessica.com'">🧚✨Back To Main Site✨🧚</button>
     </footer>
 </body>
 </html>

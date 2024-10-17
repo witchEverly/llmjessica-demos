@@ -8,6 +8,11 @@
 <!--    <link rel="mask-icon" href="images/favicon_2.svg">-->
 <!--    <link rel="apple-touch-icon" href="images/favicon_2.png">-->
     <style>
+        * {
+            box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -17,7 +22,7 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1020px;
+            max-width: 1150px;
             margin: 10px auto;
             padding: 40px;
             background-color: #1f1e33; /* Lighter Purple */
@@ -36,6 +41,22 @@
             font-size: 1.1em;
             text-align: left;
             margin: 20px;
+        }
+        .styled-button {
+            background-color: #3a1b35; /* Radical 3a1b35 Pink */
+            color: white;
+            padding: 10px 20px;
+            /*border: #d63a70;*/
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px 10px;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+        }
+        .styled-button:hover {
+            background-color: #fe428e; /* Slightly darker shade for hover effect */
         }
         .footer {
             text-align: center;
@@ -113,21 +134,22 @@
                 Llama2 is used to generate a fine-tuned representation of the clustered topics.
                 The Llama2 model is loaded with quantization to handle the LLM on limited GPU memory, leveraging 4-bit quantization.
                 </p>
+            <br>
             <hr>
                 <p class="content">To interpret the results of the BERTopic algorithm, a Plotly visualization is created where users can explore the labeled topics and documents. By setting custom labels derived from the text generation models, topics become more interpretable and user-friendly.</p>
         <div class="iframe-container">
             <iframe src="fig.html" title="Embedded Document" onload="resizeIframe(this)"></iframe>
         </div>
     </div>
-    <footer class="footer">
-        <p>&copy; 2024 LLMjessica.com. All rights reserved.</p>
-        <p><a href="https://llmjessica.com">Back to main site</a></p>
-    </footer>
-
     <script>
         function resizeIframe(iframe) {
             iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
         }
     </script>
+    </div>
+    <footer class="footer">
+        <p class="quote-section">&copy; 2024 LLMjessica.com. All rights reserved.</p>
+        <button class="styled-button" onclick="window.location.href='https://llmjessica.com'">🧚✨Back To Main Site✨🧚</button>
+    </footer>
 </body>
 </html>
